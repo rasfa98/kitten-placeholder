@@ -1,3 +1,5 @@
+import kittens from "../data.ts";
+
 export default async ({ response }: { response: any }) => {
-  response.body = "Kittens!";
+  response.body = kittens;
 };
