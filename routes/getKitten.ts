@@ -5,10 +5,7 @@ export default async ({ params, response }: { response: any; params: any }) => {
 
   if (!Number.isInteger(id)) {
     response.status = 400;
-    response.body = {
-      "error": "Invalid ID",
-      "message": "The provided ID is invalid",
-    };
+    response.body = {};
 
     return;
   }
@@ -17,10 +14,7 @@ export default async ({ params, response }: { response: any; params: any }) => {
 
   if (!kitten) {
     response.status = 404;
-    response.body = {
-      "error": "Not Found",
-      "message": "Kitten Not Found",
-    };
+    response.body = {};
 
     return;
   }
